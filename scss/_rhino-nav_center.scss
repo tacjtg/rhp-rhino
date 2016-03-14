@@ -1,0 +1,183 @@
+.rhp-rhino {
+
+	#header-container {
+		text-align: center;
+
+		#header {
+			padding: 20px;
+
+			.rhino-header {
+
+				.rhino-social {
+
+					ul.rhino-social-icons {
+						margin: 5px 0 0 0;
+
+						li.rhino-social-icon {
+							display: inline-block;
+							margin: 0 2px;
+							width: 24px;
+							height: 24px;
+
+							img, .svg {
+								width: 100%;
+								height: 100%;
+								transition: 0.2s ease;
+
+								&:hover, &:focus {
+								}
+							}
+
+							&:first-child {
+								margin-left: 0;
+							}
+
+							&:last-child {
+								margin-right: 0;
+							}
+						}
+					}
+				}
+			}
+
+			.rhino-header-right {
+
+				ul.rhino-contact-info {
+					margin-bottom: 20px;
+
+					li {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+
+	ul.rhino-contact-info {
+						
+		li {
+			display: block;
+			margin-bottom: 5px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.svg, span {
+				display: inline;
+				vertical-align: middle;
+			}
+
+			.svg {
+				width: 18px;
+				height: 18px;
+				margin-right: 2px;
+			}
+		}
+	}
+
+	h3.nav-toggle {
+		background-image: none;
+		border: none;
+
+		a,
+		&:before {
+			text-shadow: none;
+			border: none;
+		}
+	}
+
+	#nav-container {
+		border: none;
+		margin-bottom: 0;
+
+		#navigation {
+
+			.menus {
+				width: 100%;
+				text-align: center;
+
+				ul#main-nav {
+					margin: 0;
+					padding: 0;
+
+					li {
+						font-size: 18px;
+						font-weight: bold;
+
+						a {
+							display: block;
+							text-decoration: none;
+							padding: 8px 16px;
+							transition: 0.2s ease;
+						}
+
+						&:first-child,
+						&:last-child {
+							border-left: 0;
+							border-right: 0
+						}
+
+						ul.sub-menu {
+							margin-left: 1px;
+							min-width: 240px;
+
+							li {
+								font-size: 14px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	
+	.rhp-rhino {
+
+		#header-container {
+
+			#header {
+				padding: 20px 0;
+			}
+			
+			#logo {
+				max-width: 320px;
+				height: auto;
+				text-align: left;
+
+				h1.site-title {
+					margin-top: 0;
+				}
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			.rhino-header {
+				width: auto;
+				float: right;
+
+				.rhino-header-right {
+
+					.rhino-contact-info {
+						margin-top: 0;
+						margin-bottom: 15px;
+					}
+				}
+
+				.rhino-social {
+					display: block;
+
+					ul.rhino-social-icons {
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+}

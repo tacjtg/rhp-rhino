@@ -1,0 +1,27 @@
+@media only screen and (min-width: 768px) {
+.rhp-rhino {
+	#nav-container {
+
+		#navigation {
+
+			.menus {
+
+				ul#main-nav {
+
+					li {
+						text-align: left;
+
+						ul.sub-menu {
+							margin-left: 1px;
+							min-width: 240px;
+
+							li {
+								font-size: inherit;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

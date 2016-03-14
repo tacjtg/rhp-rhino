@@ -1,0 +1,1204 @@
+$enable_advanced: false !default;
+
+// Inspired by: http://stackoverflow.com/a/21772818
+@mixin rhino-colors-advanced {
+	@if $enable_advanced {
+		@content;
+	}
+}
+
+@include rhino-colors-advanced {
+
+	body.rhp-rhino, body.page.rhp-rhino {
+		background-color: $white;
+	}
+
+	body.rhp-rhino a:link, body.rhp-rhino a:visited,
+	body.rhp-rhino ul.nav li.current_page_item a,
+	body.rhp-rhino ul.nav li.current_page_parent a,
+	body.rhp-rhino ul.nav li.current-menu-ancestor a,
+	body.rhp-rhino ul.nav li.current-cat a,
+	body.rhp-rhino ul.nav li.current-menu-item a,
+	body.rhp-rhino .post-entries a:link,
+	body.rhp-rhino .post-entries a:visited,
+	body.rhp-rhino .post-meta a:link,
+	body.rhp-rhino .post-meta a:visited,
+	body.rhp-rhino .post p.tags a:link,
+	body.rhp-rhino .post p.tags a:visited,
+	body.rhp-rhino #tribe-events-content a.rhino-event-more-info,
+	body.rhp-rhino a.rhino-event-rsvp {
+		color: $link_color;
+		text-decoration: none;
+		transition: 0.2s ease;
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+
+	.rhp-rhino {
+		#header-container {
+			background-color: $tertiary_color;
+
+			#header {
+
+				#logo {
+					color: $primary_color;
+
+					a {
+						color: $primary_color;
+
+						&:hover, &:focus {
+							text-decoration: none;
+							color: darken($primary_color, 12%);
+						}
+					}
+
+					.site-description {
+						color: $secondary_color;
+					}
+				}
+
+				.rhino-header {
+
+					.rhino-social {
+
+						ul.rhino-social-icons {
+
+							li.rhino-social-icon {
+
+								img, .svg {
+									color: $primary_color;
+									fill: $primary_color;
+
+									&:hover, &:focus {
+										fill: darken($primary_color, 12%);
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.rhino-header-right {
+					color: $primary_color;
+
+					ul.rhino-contact-info {
+
+						li {
+							color: $primary_color;
+
+							img, .svg {
+								fill: $primary_color;
+							}
+
+							a, a:visited {
+								color: $primary_color;
+
+								img, .svg {
+									fill: $primary_color;
+
+									&:hover, &:focus {
+										fill: darken($primary_color, 12%);
+									}
+								}
+
+								&:hover, &:focus {
+									color: darken($primary_color, 12%);
+									fill: darken($primary_color, 12%);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		h3.nav-toggle {
+			background-color: $primary_color;
+		}
+
+		#nav-container {
+			background: $primary_color;
+
+			#navigation .nav-home,
+			#navigation .nav-close,
+			#navigation ul.rss li a,
+			#navigation ul.cart a.cart-contents,
+			#navigation ul.nav-search a.search-contents {
+				background-color: $primary_color;
+			}
+
+			#navigation {
+				background-color: $primary_color;
+
+				h3 {
+					color: lighten($primary_color, 80%);
+				}
+
+				.menus {
+
+					ul#main-nav {
+
+						li {
+
+							&:hover, &:focus {
+								color: lighten($primary_color, 50%);
+								background-color: darken($primary_color, 12%);
+							}
+
+							a {
+								color: lighten($primary_color, 80%);
+
+								&:hover, &:focus {
+									color: lighten($primary_color, 50%);
+									background-color: darken($primary_color, 12%);
+								}
+							}
+
+							&.current_page_item, &.current-menu-item, &.current-cat, &.current-menu-ancestor, &.current_page_parent, &.current_page_item {
+
+								a {
+									color: lighten($primary_color, 70%);
+									background-color: darken($primary_color, 8%);
+								}
+							}
+
+							ul.sub-menu {
+
+								li {
+
+									a {
+										color: lighten($primary_color, 80%) !important;
+
+										&:hover, &:focus {
+											color: lighten($primary_color, 60%) !important;
+											background-color: darken($primary_color, 18%) !important;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#footer-container {
+			background-color: $primary_color;
+
+			#footer {
+
+				.rhino-footer {
+
+					.rhino-footer-nav {
+
+						.rhino-footer-menu {
+
+							ul.menu {
+
+								li {
+									border-bottom: 1px solid scale-color($primary_color, $lightness: 10%);
+
+									&:hover, &:focus {
+										background-color: darken($primary_color, 8%) !important;
+									}
+
+									a {
+										color: $tertiary_color;
+
+										&:hover, &:focus {
+											background-color: darken($primary_color, 8%) !important;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.rhino-social {
+					background: lighten($primary_color, 10%);
+
+					ul.rhino-social-icons {
+
+						li.rhino-social-icon {
+
+							img, .svg {
+								color: $tertiary_color;
+								fill: $tertiary_color;
+
+								&:hover, &:focus {
+									color: darken($tertiary_color, 12%);
+									fill: darken($tertiary_color, 12%);
+								}
+							}
+						}
+					}
+				}
+
+				.rhino-footer-right {
+
+					ul.rhino-contact-info {
+
+						li {
+							color: $tertiary_color;
+
+							a, .svg {
+								color: $tertiary_color;
+								fill: $tertiary_color;
+
+								&:hover, &:focus {
+									color: darken($tertiary_color, 12%);
+									fill: darken($tertiary_color, 12%);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			#copyright {
+
+				p {
+					color: $tertiary_color;
+				}
+			}
+		}
+
+		#rockhouse-powered {
+			background-color: $primary_color;
+		}
+
+		.responsive-tabs {
+
+			ul.responsive-tabs__list {
+				border-bottom: 3px solid $primary_color;
+
+				li {
+					&.responsive-tabs__list__item {
+						background: $tertiary_color;
+						border-top: 3px solid darken($tertiary_color, 20%);
+						color: darken($tertiary_color, 50%);
+
+						&:hover {
+							background: darken($tertiary_color, 6%);
+						}
+					}
+
+					&.responsive-tabs__list__item--active {
+						background: $tertiary_color;
+						border-top: 3px solid $primary_color;
+						color: $primary_color;
+
+						&:hover {
+							background: $tertiary_color;
+						}
+					}
+				}
+			}
+
+			h3.responsive-tabs__heading {
+				background: $tertiary_color;
+				border-top: 3px solid darken($tertiary_color, 20%);
+				color: darken($tertiary_color, 50%);
+
+				&:hover {
+					background: darken($tertiary_color, 6%);
+				}
+
+				&.responsive-tabs__heading--active {
+					background: $tertiary_color;
+					border-top: 3px solid $primary_color;
+					color: $primary_color;
+
+					&:hover {
+						background: $tertiary_color;
+					}
+				}
+			}
+
+			.responsive-tabs__panel {
+				background: $tertiary_color;
+				border-bottom: 3px solid $primary_color;
+			}
+		}
+
+		blockquote, .entry blockquote {
+			border-left: 3px solid $primary_color;
+		}
+	} // .rhp-rhino
+
+	@media only screen and (min-width: 768px) {
+
+		.rhp-rhino {
+
+			#header-container {
+
+				#header {
+					#nav-container {
+						background-color: transparent;
+
+						#navigation {
+							background-color: transparent;
+
+							.menus {
+
+								ul#main-nav {
+
+									li {
+
+										a {
+											color: $primary_color;
+
+											&:hover, &:focus {
+												color: $secondary_color;
+												background-color: transparent;
+											}
+										}
+
+										&:hover, &:focus {
+											color: $secondary_color;
+											background-color: transparent;
+										}
+
+										&.menu-item-has-children {
+
+											&:hover, &:focus {
+												background-color: $primary_color;
+												color: $white;
+
+												a {
+													color: $white;
+												}
+											}
+										}
+
+										&.current_page_item,
+										&.current-menu-item {
+
+											a {
+												background-color: transparent;
+											}
+										}
+
+										ul.sub-menu {
+											background-color: $primary_color;
+
+											li {
+												color: $primary_color;
+
+												a {
+													color: $white !important;
+
+													&:hover, &:focus {
+														color: $white !important;
+														background-color: darken($primary_color, 12%) !important;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				#nav-container {
+
+					#navigation {
+						background-color: $primary_color;
+
+						.menus {
+
+							ul#main-nav {
+
+								li {
+
+									&:hover, &:focus {
+										color: lighten($primary_color, 50%);
+										background-color: darken($primary_color, 12%);
+									}
+
+									a {
+										color: lighten($primary_color, 80%);
+
+										&:hover, &:focus {
+											color: lighten($primary_color, 50%);
+											background-color: darken($primary_color, 12%);
+										}
+									}
+
+									&.current_page_item, &.current-menu-item, &.current-cat, &.current-menu-ancestor, &.current_page_parent, &.current_page_item {
+
+										a {
+											color: lighten($primary_color, 70%);
+											background-color: darken($primary_color, 8%);
+										}
+									}
+
+									ul.sub-menu {
+										background-color: darken($primary_color, 12%);
+
+										li {
+											color: lighten($primary_color, 80%);
+
+											a {
+												color: lighten($primary_color, 80%) !important;
+
+												&:hover, &:focus {
+													color: lighten($primary_color, 60%) !important;
+													background-color: darken($primary_color, 18%) !important;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		} // .rhp-rhino
+
+		.rhp-rhino {
+
+			#footer-container {
+
+				#footer {
+
+					.rhino-footer {
+
+						.rhino-footer-nav {
+
+							.rhino-footer-menu {
+
+								ul.menu {
+
+									li.menu-item {
+
+										a {
+											color: $tertiary_color;
+
+											&:hover, &:focus {
+												background-color: darken($primary_color, 8%);
+											}
+										}
+
+										&:last-child {
+											border-right: none;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					.rhino-social {
+						background: lighten($primary_color, 10%);
+
+						ul.rhino-social-icons {
+
+							li.rhino-social-icon {
+
+								img, .svg {
+									color: $tertiary_color;
+									fill: $tertiary_color;
+
+									&:hover, &:focus {
+										color: darken($tertiary_color, 12%);
+										fill: darken($tertiary_color, 12%);
+									}
+								}
+							}
+						}
+					}
+
+					.rhino-footer-right {
+						border-top: 1px solid scale-color($primary_color, $lightness: 10%);
+						border-bottom: 1px solid scale-color($primary_color, $lightness: 10%);
+
+						ul.rhino-contact-info {
+
+							li {
+								color: $tertiary_color;
+
+								a, .svg {
+									color: $tertiary_color;
+									fill: $tertiary_color;
+
+									&:hover, &:focus {
+										color: darken($tertiary_color, 12%);
+										fill: darken($tertiary_color, 12%);
+									}
+								}
+							}
+						}
+					}
+				}
+
+				#copyright {
+
+					p {
+						color: $tertiary_color;
+					}
+				}
+			}
+
+			article.post {
+				border-bottom: 1px solid lighten($black, 90%);
+
+				h2.entry-title {
+					color: $primary_color;
+
+					a:link, a:visited {
+						color: $link-color;
+
+						&:hover, &:focus {
+							color: darken($link-color, 12%);
+						}
+					}
+				}
+			}
+
+			#rockhouse-powered {
+				background-color: $primary_color;
+				color: $tertiary_color;
+
+				a {
+					color: $tertiary_color;
+
+					&:hover, &:focus {
+						color: lighten($tertiary_color, 12%);
+					}
+				}
+			}
+
+			#tribe-events .tribe-events-button, #tribe-events .tribe-events-button:hover, #tribe_events_filters_wrapper input[type=submit], .tribe-events-button, .tribe-events-button.tribe-active:hover, .tribe-events-button.tribe-inactive, .tribe-events-button:hover, .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a, #tribe_events_filters_wrapper .tribe_events_slider_val, .single-tribe_events a.tribe-events-gcal, .single-tribe_events a.tribe-events-ical {
+				background-color: $secondary_color;
+				background: $secondary_color;
+				color: lighten($secondary_color, 50%);
+
+				&:hover, &:focus {
+					background-color: darken($secondary_color, 12%);
+					background: darken($secondary_color, 12%);
+				}
+			}
+
+			.tribe-events-tooltip h4 {
+				background-color: transparent;
+				background: none;
+			}
+		} // .rhp-rhino
+	}
+
+
+
+
+
+
+
+	// RHINO FONT COLORS
+
+	body.rhp-rhino,
+	body.page.rhp-rhino {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		color: $black;
+
+		a:link,
+		a:visited,
+		ul.nav li.current_page_item a,
+		ul.nav li.current_page_parent a,
+		ul.nav li.current-menu-ancestor a,
+		ul.nav li.current-cat a,
+		ul.nav li.current-menu-item a {
+			color: $link_color;
+		}
+
+		p, ul, ol, li, .entry, .entry p, h5, h6, #logo .site-description, .widget p, .tribe-events-calendar th {
+			color: $black;
+		}
+
+		#logo .site-title a, h1, h2, h3, .widget h3, h4, .page-title, .post .title, .page .title, #tribe-events-content .tribe-events-calendar div[id*=tribe-events-event-] h3.tribe-events-month-event-title, #tribe-events-content .tribe-events-tooltip h4, .responsive-tabs__list__item--active {
+			color: $primary_color;
+		}
+	} // .rhp-rhino
+
+
+
+
+
+
+
+	// RHINO BUTTON COLORS
+
+	.rhp-rhino {
+
+		a.button.primary,
+		input[type=submit].primary,
+		input.button.primary {
+			background: $button_primary_color;
+			color: $white;
+
+			&:hover, &:focus {
+				background: darken($button_primary_color, 9%) !important;
+			}
+		}
+
+		a.button.secondary,
+		p.tribe-events-widget-link a,
+		.rhino-widget-list p.tribe-events-widget-link a,
+		input[type=submit], input.button,
+		#tribe-bar-form .tribe-bar-submit input[type=submit] {
+			background: $primary_color;
+			color: $white;
+
+			&:hover, &:focus {
+				background: darken($primary_color, 9%);
+			}
+		}
+
+		a.button.tertiary {
+			background: rgba($black, .1);
+			color: lighten($black, 40%);
+		}
+
+		a.button,
+		a.comment-reply-link,
+		#commentform #submit,
+		.submit,
+		input[type=submit],
+		input.button,
+		button.button,
+		#wrapper .woo-sc-button,
+		span.button,
+		a.comment-reply-link,
+		#commentform #submit,
+		.submit,
+		#wrapper .woo-sc-button,
+		.rhino-widget-list p.tribe-events-widget-link a,
+		.widget.tribe-events-list-widget p.tribe-events-widget-link a {
+			color: $white;
+		}
+
+		span.button.tertiary,
+		span.coming-soon,
+		span.sold-out,
+		span.free,
+		span.off-sale {
+			background: rgba($black, .1);
+			color: lighten($black, 40%);
+		}
+
+		.rhino-slide-right {
+
+			span.button.tertiary, span.coming-soon, span.sold-out, span.free, span.off-sale {
+				background: lighten($black, 85%);
+				color: lighten($black, 40%);
+			}
+		}
+	}
+
+
+
+
+
+
+
+	// RHINO NAV CENTER COLORS
+
+	.rhp-rhino { } // .rhp-rhino
+
+
+
+
+
+
+
+	// RHINO NAV RIGHT COLORS
+
+	@media only screen and (min-width: 768px) {
+		.rhp-rhino {
+
+			#nav-container {
+
+				#navigation {
+
+					.menus {
+
+						ul#main-nav {
+
+							li {
+
+								&:hover, &:focus {
+									color: lighten($primary_color, 50%);
+									background-color: darken($primary_color, 12%);
+								}
+
+								a {
+									color: lighten($primary_color, 80%);
+
+									&:hover, &:focus {
+										color: lighten($primary_color, 50%);
+										background-color: darken($primary_color, 12%);
+									}
+								}
+
+								&.current_page_item, &.current-menu-item, &.current-cat, &.current-menu-ancestor, &.current_page_parent, &.current_page_item {
+
+									a {
+										color: lighten($primary_color, 70%);
+										background-color: darken($primary_color, 8%);
+									}
+								}
+
+								ul.sub-menu {
+									background-color: darken($primary_color, 12%);
+
+									li {
+										color: lighten($primary_color, 80%);
+
+										a {
+											color: lighten($primary_color, 80%) !important;
+
+											&:hover, &:focus {
+												color: lighten($primary_color, 60%) !important;
+												background-color: darken($primary_color, 18%) !important;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		} // .rhp-rhino
+	}
+
+
+
+
+
+
+
+
+
+	// TRIBE EVENT COLORS
+
+	.rhp-rhino {
+		.tribe-events-list-separator-month {
+			background-color: $tertiary_color;
+			color: darken($tertiary_color, 80%);
+		}
+
+		.tribe-events-notices {
+			background-color: lighten($primary_color, 50%);
+			color: $primary_color;
+			border: 1px solid darken($primary_color, 1%);
+
+			ul {
+
+				li {
+					color: darken($primary_color, 15%);
+				}
+			}
+		}
+
+		.rhino-event-wrapper,
+		.tribe-events-single,
+		.widget.tribe-events-list-widget,
+		#tribe-events-content table.tribe-events-calendar {
+			background-color: $tertiary_color;
+			border-bottom: 3px solid $primary_color;
+
+			p.rhino-event-tagline {
+				color: $secondary_color;
+			}
+
+			h2.rhino-event-header {
+				color: $primary_color;
+
+				a:link, a:visited, a {
+					color: $primary_color;
+
+					&:hover, &:focus {
+						color: darken($primary_color, 20%);
+					}
+				}
+			}
+
+			h3.rhino-event-subheader {
+				color: $secondary_color;
+			}
+
+			.rhino-event-center {
+
+				.rhino-event-date-box,
+				.rhino-event-time-box,
+				.rhino-event-price-box {
+					color: $black;
+
+					p, i {
+						color: $black;
+					}
+				}
+
+				.rhino-event-notes-box {
+					border-top: 1px solid rgba($black, .1);
+					color: $black;
+
+					p {
+						color: $secondary_color;
+					}
+				}
+			}
+
+			.tribe-events-content {
+				border-top: 1px solid rgba($black, .1);
+			}
+
+			.rhino-event-list-share {
+				border-top: 1px solid rgba($black, .1);
+
+				a.rhino-event-rsvp {
+					color: $link_color !important;
+
+					&:hover, &:focus {
+						color: darken($link_color, 12%);
+					}
+				}
+			}
+		}
+
+		#tribe-events-pg-template {
+
+			.tribe-events-single {
+
+				.rhino-single-event-right {
+
+					.rhino-event-cta-box {
+						background-color: rgba($white, 0.9);
+						border-top: 3px solid $primary_color;
+					}
+				}
+
+				h2.rhino-event-header {
+					color: $primary_color;
+
+					a:link, a:visited, a {
+						color: $primary_color;
+
+						&:hover, &:focus {
+							color: darken($primary_color, 20%);
+						}
+					}
+				}
+
+				h3.rhino-event-subheader {
+					color: $secondary_color;
+				}
+
+				.rhino-event-date-box,
+				.rhino-event-time-box,
+				.rhino-event-price-box {
+					color: $black;
+
+					p, i {
+						color: $black;
+					}
+				}
+
+				.rhino-event-notes-box {
+					border-top: 1px solid rgba($black, .1);
+					border-bottom: 1px solid rgba($black, .1);
+					color: $black;
+
+					p {
+						color: $secondary_color;
+					}
+				}
+			}
+		}
+	} // .rhp-rhino
+
+	@media only screen and (min-width: 768px) {
+
+		.rhp-rhino {
+
+			#tribe-events #tribe-events-content.tribe-events-month {
+
+				.tribe-events-calendar {
+					border: 1px solid darken($tertiary_color, 20%);
+
+					tbody.vcalendar {
+
+						td {
+							border: 1px solid darken($tertiary_color, 20%);
+
+							&.tribe-events-present {
+								div[id*=tribe-events-daynum-] {
+									background-color: $primary_color;
+									background: $primary_color;
+									color: lighten($primary_color, 80%);
+								}
+							}
+						}
+					}
+
+					th {
+						background-color: $secondary_color;
+						background: $secondary_color;
+						color: lighten($secondary_color, 80%);
+					}
+				}
+
+				#rhp-calendar-sidebar {
+
+					.tribe-events-tooltip {
+						background: $tertiary_color;
+						background-color: $tertiary_color;
+						border-bottom: 3px solid $primary_color;
+					}
+				}
+			}
+		} // .rhp-rhino
+	}
+
+	@media only screen and (min-width: 980px) {
+		.rhp-rhino {
+			.rhino-event-wrapper,
+			#home-widget-container.no-sidebar {
+
+				.rhino-event-left {
+
+					.rhino-event-datebox {
+						color: $white;
+
+						.rhino-event-datebox-month {
+							background-color: $secondary_color;
+
+							p {
+								color: $white;
+							}
+						}
+
+						.rhino-event-datebox-date {
+							background-color: $secondary_color;
+
+							p {
+								color: $white;
+							}
+						}
+
+						.rhino-event-datebox-day {
+							background-color: $primary_color;
+
+							p {
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+
+			#tribe-events #tribe-events-content.tribe-events-month {
+
+				#rhp-calendar-sidebar {
+
+					.tribe-events-tooltip {
+						background: $tertiary_color;
+						background-color: $tertiary_color;
+						border-bottom: 3px solid $primary_color;
+					}
+				}
+			}
+		} // .rhp-rhino
+	}
+
+	.rhp-rhino {
+
+		#sidebar .widget.tribe-events-list-widget {
+
+			ol {
+
+				li {
+					border-bottom: 1px solid rgba($black, 0.1);
+
+					.rhino-events-widget-vitals {
+
+						h4 {
+							color: $primary_color;
+
+							a {
+								color: $primary_color;
+							}
+						}
+
+						.duration {
+							color: $secondary_color;
+						}
+					}
+				}
+			}
+		}
+
+		#tribe-events .tribe-events-loop .tribe-events-content {
+			border-top: 1px solid rgba(0,0,0,0.1);
+		}
+
+		#tribe-bar-form {
+			background: $tertiary_color;
+
+			#tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a {
+				background: darken($tertiary_color, 10%);
+
+				&:hover {
+					background: darken($tertiary_color, 20%);
+				}
+			}
+
+			.tribe-bar-search-filter,
+			.tribe-bar-rhp-cat-filter,
+			.tribe-bar-rhp-venue-filter {
+
+				select {
+					background-color: darken($tertiary_color, 10%);
+					color: darken($tertiary_color, 70%);
+				}
+			}
+		}
+	} // .rhp-rhino
+
+
+
+
+
+
+
+
+	// WIDGET COLORS
+
+	.rhp-rhino {
+
+		#home-widget-container-main {
+
+			.widget {
+				background-color: transparent;
+			}
+		}
+
+		#sidebar {
+
+			.widget {
+				background-color: $tertiary_color;
+				border-bottom: 3px solid $primary_color;
+
+				h3 {
+					color: darken($tertiary_color, 80%);
+				}
+			}
+		}
+
+		#footer-widgets-container {
+			background: $tertiary_color;
+			color: $black;
+
+			p {
+				color: $black;
+			}
+		}
+
+		.widget.widget_rhino_email_widget,
+		#sidebar .widget.widget_rhino_email_widget,
+		#home-widget-container-above .widget.widget_rhino_email_widget,
+		.rhino-widget-area-below-nav .widget.widget_rhino_email_widget {
+			background-color: $secondary_color;
+
+			h3,
+			p.rhino-email-details {
+				color: lighten($primary_color, 80%);
+			}
+
+			.mc-field-group {
+
+				input.email {
+					background: $white;
+					color: $black;
+					border: 1px solid lighten($secondary_color, 5%);
+				}
+			}
+		}
+
+		.widget.widget_recent_entries {
+
+			ul {
+
+				li {
+					border-bottom: 1px solid rgba($black, 0.1);
+
+					.post-date {
+						color: $secondary_color;
+					}
+				}
+			}
+		}
+	} // .rhp-rhino
+
+	@media only screen and (min-width: 768px) {
+
+		.rhp-rhino {
+			.widget.widget_meteor-slides-widget {
+				background: $tertiary_color;
+
+				#meteor-slideshow {
+
+					h3.rhino-slide-title {
+						color: $white;
+					}
+
+					a {
+
+						h3.rhino-slide-title {
+							color: $white;
+						}
+					}
+
+					.rhino-slide-details {
+
+						p.rhino-event-date,
+						p.rhino-event-time,
+						p.rhino-event-venue,
+						p.rhino-event-price,
+						p.rhino-slide-description,
+						i.fa {
+							color: $white;
+						}
+					}
+				}
+			}
+
+			#sidebar .widget.widget_rhino_email_widget {
+				background-color: $secondary_color;
+
+				h3,
+				p.rhino-email-details {
+					color: lighten($primary_color, 80%);
+				}
+
+				.mc-field-group {
+
+					input.email {
+						background: $white;
+						color: $black;
+						border: 1px solid lighten($secondary_color, 5%);
+					}
+				}
+			}
+		} // .rhp-rhino
+	}
+
+} // End @mixin
+

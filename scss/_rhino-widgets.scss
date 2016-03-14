@@ -1,0 +1,462 @@
+// LOOKING FOR COLOR STYLES? CHECK THE _RHINO-COLORS.SCSS FILE
+
+.rhp-rhino {
+	#home-widget-container-main {
+
+		.widget {
+			border-bottom: none;
+		}
+	}
+
+	#home-widget-container-above,
+	.rhino-widget-area-below-nav {
+		text-align: center;
+
+		&.col-full {
+			max-width: 100%;
+		}
+
+		.widget {
+			margin-bottom: 0;
+		}
+
+		.widget.widget_rhino_email_widget {
+			padding: 20px;
+		}
+	}
+
+	#sidebar {
+
+		.widget {
+			border-bottom: 3px solid;
+		}
+	}
+
+	#footer-widgets-container {
+
+		p {	}
+
+		#footer-widgets {
+			border: none;
+		}
+	}
+
+	.widget_meteor-slides-widget {
+		display: none;
+	}
+
+	.widget.widget_rhino_email_widget,
+	#sidebar .widget.widget_rhino_email_widget,
+	#home-widget-container-above .widget.widget_rhino_email_widget,
+	.rhino-widget-area-below-nav .widget.widget_rhino_email_widget {
+		text-align: left;
+
+		h3,
+		p.rhino-email-details {	}
+
+		p.rhino-email-embed {
+			display: none;
+		}
+
+		.mc-field-group {
+
+			input.email {
+				width: 100%;
+				display: block;
+				padding: 11px 0;
+				border: 1px solid;
+				font-family: $body_font_family;
+				font-size: 14px;
+				text-align: center;
+				font-weight: normal;
+				border-radius: 0;
+				margin-bottom: 3px;
+			}
+		}
+	}
+
+	.widget.widget_recent_entries {
+
+		ul {
+			margin: 10px 0 0 0;
+			
+			li {
+				display: block;
+				clear: both;
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid;
+
+				&:last-child {
+					border-bottom: none;
+				}
+
+				a {
+					display: block;
+					margin-bottom: 3px;
+					font-size: 16px;
+					font-weight: bold;
+					font-family: $header_font_family;
+				}
+
+				.post-date {
+					display: block;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+} // .rhp-rhino
+
+@media only screen and (min-width: 768px) {
+	
+	.rhp-rhino {
+		.widget_meteor-slides-widget {
+			display: block;
+			padding: 0;
+			max-width: 100%;
+			width: 100%;
+
+			#meteor-slideshow {
+				margin: 0 auto;
+
+				h3.rhino-slide-title {
+					font-size: 32px;
+					line-height: 1.2;
+					margin-bottom: 10px;
+					text-decoration: none;
+				}
+
+				a {
+
+					h3.rhino-slide-title {
+						text-decoration: none;
+					}
+				}
+
+				&.meteor-slides {
+
+					a.rhino-slide-header,
+					h3.rhino-slide-title:hover {
+						text-decoration: none;
+					}
+
+					.mslide {
+
+						img {
+							width: 100%;
+							height: auto;
+						}
+					}
+
+					.rhino-slide-left {
+						text-align: center;
+						padding: 0;
+						width: 60%;
+						margin: 20px;
+						float: left;
+						text-align: left;
+					}
+
+					.rhino-slide-right {
+						text-align: center;
+						padding: 0 20px 20px 20px;
+						width: 22%;
+						margin: 20px;
+						float: right;
+						padding: 0;
+						text-align: right;
+					}
+
+					.meteor-buttons {
+						text-align: center;
+
+						a {
+							display: inline-block;
+							float: none;
+						}
+					}
+				}
+
+				.rhino-slide-details {
+					
+					p.rhino-event-date,
+					p.rhino-event-time,
+					p.rhino-event-venue,
+					p.rhino-event-price,
+					p.rhino-slide-description,
+					i.fa {
+						display: inline-block;
+						vertical-align: middle;
+						font-size: 16px;
+						margin-bottom: 0;
+					}
+
+					i.fa {
+						margin-right: 5px;
+					}
+
+					p.rhino-event-date,
+					p.rhino-event-time {
+						margin: 0 20px 0 0;
+						display: inline;
+					}
+				}
+
+				.rhino-slide-wrapper {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					z-index: 999999;
+					width: 100%;
+					/* Fallback for web browsers that don't support RGBa */
+				    background-color: rgb(0, 0, 0);
+				    /* RGBa with 0.6 opacity */
+				    background-color: rgba(0, 0, 0, 0.6);
+				    /* For IE 5.5 - 7*/
+				    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+				    /* For IE 8*/
+				    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+				}
+			}
+
+			#meteor-slideshow {
+				
+				// THUMBNAIL SLIDESHOW STYLING			
+				&.rhino-thumbnails-layout {
+
+					&.meteor-slides {
+					
+						.meteor-clip {
+							width: 78%;
+							display: inline-block;
+							position: relative;
+							float: left;
+						}
+
+						.meteor-buttons {
+							width: 18%;
+							height: auto;
+							padding-right: 2%;
+							clear: right;
+	    					text-align: right;
+	    					float: right;
+	    					position: relative;
+
+	    					li {
+	    						display: block;
+								width: 100%;
+								height: auto;
+								margin: 0 0 3% 0;
+								list-style-type: none;
+								float: right;
+
+								a {
+									background: none;
+									width: auto;
+									height: auto;
+								}
+
+								img {
+									display: inline-block;
+									width: 100%;
+									max-width: 100%;
+									height: auto;
+									float: left;
+									z-index: 1;
+									margin-top: 0;
+									vertical-align: bottom;
+								}
+
+								.color-overlay {
+									width: 100%;
+									height: 100%;
+									z-index: 1000;
+									opacity: 0.5;
+								}
+
+								&.activeSlide {
+
+									.color-overlay {
+										background-color: transparent;
+										opacity: 1;
+									}
+								}
+	    					}
+						}
+					}
+				}
+
+				// THUMBNAIL SLIDESHOW STYLING			
+				&.rhino-left-layout {
+
+					&.meteor-slides {
+					
+						.meteor-clip {
+
+							.rhino-slide-wrapper {
+								width: 30%;
+								height: 100%;
+								top: 0;
+								padding: 20px;
+
+								.rhino-slide-left {
+									width: 100%;
+									display: block;
+									float: none;
+									padding: 0;
+									margin: 0 0 20px;
+									text-align: left;
+								}
+
+								.rhino-slide-right {
+									width: 100%;
+									display: block;
+									float: none;
+									padding: 0;
+									margin: 0;
+									text-align: left;
+
+									a.button {
+										display: inline-block;
+										width: auto;
+									}
+								}
+							}
+						}
+
+						.meteor-buttons {
+							bottom: 0;
+							z-index: 10000;
+							text-align: left;
+							padding: 0 0 20px 20px;
+						}
+					}
+				}
+			}
+		}
+
+		.widget.widget_rhino_email_widget,
+		#home-widget-container-above .widget.widget_rhino_email_widget,
+		.rhino-widget-area-below-nav .widget.widget_rhino_email_widget {
+
+			.rhino-email-widget h3,
+			.rhino-email-widget p.rhino-email-details {
+				display: inline-block;
+				margin-right: 2%;
+				float: left;
+				text-align: left;
+				vertical-align: middle;
+				margin-bottom: 0;
+			}
+			
+			p.rhino-email-details {
+				margin-top: 0;
+				width: 38%;
+				vertical-align: middle;
+			}
+
+			#mc_embed_signup {
+				float: right;
+				width: 40%;
+
+				.mc-field-group {
+					float: right;
+					vertical-align: middle;
+					width: 100%;
+					max-width: 400px;
+					text-align: right;
+
+					input.button.large.email,
+					input[type=submit] {
+						width: auto;
+						display: inline-block;
+						float: right;
+						width: 34%
+					}
+				}
+
+				input.email {
+					width: 64%;
+					display: inline-block;
+					text-align: left;
+					padding-left: 12px;
+					margin-bottom: 0;
+					margin-right: 5px;
+					float: left;
+				}
+			}
+		}
+
+		#sidebar .widget.widget_rhino_email_widget {
+			text-align: left;
+
+			h3,
+			p.rhino-email-details,
+			#mc_embed_signup,
+			.mc-field-group input.button.large.email,
+			.mc-field-group input[type=submit] {
+				display: block;
+				width: 100%;
+			}
+
+			h3,
+			p.rhino-email-details {
+				margin-bottom: 5px;
+			}
+
+			p.rhino-email-embed {
+				display: none;
+			}
+
+			.mc-field-group {
+				margin-top: 10px;
+
+				input.email {
+					width: 100%;
+					display: block;
+					padding: 11px 0;
+					border: 1px solid;
+					font-family: $body_font_family;
+					font-size: 14px;
+					text-align: center;
+					font-weight: normal;
+					border-radius: 0;
+					margin-bottom: 3px;
+				}
+			}
+		}
+	} // .rhp-rhino
+}
+
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+
+	.rhp-rhino {
+
+		.widget,
+		#sidebar .widget,
+		#home-widget-container-above .widget,
+		.rhino-widget-area-below-nav .widget {
+
+			&.widget_rhino_email_widget {
+
+				.mc-field-group {
+					width: 100%;
+					max-width: 100%;
+					
+					input.email {
+						width: 75%;
+						display: inline-block;
+						float: left;
+					}
+
+					input[type=submit] {
+						width: 20%;
+						display: inline-block;
+						float: right;
+					}
+				}
+			}
+		}
+	}
+}

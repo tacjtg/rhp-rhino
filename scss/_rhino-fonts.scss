@@ -1,0 +1,56 @@
+body,
+body.page,
+body.rhp-rhino {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: $body_font_family;
+	font-weight: normal;
+
+	a:link,
+	a:visited,
+	ul.nav li.current_page_item a,
+	ul.nav li.current_page_parent a,
+	ul.nav li.current-menu-ancestor a,
+	ul.nav li.current-cat a,
+	ul.nav li.current-menu-item a {
+		text-decoration: none;
+		transition: 0.2s ease;
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+
+	p, ul, ol, li, .entry, .entry p, h5, h6, #logo .site-description, .widget p, .tribe-events-calendar th {
+		font-family: $body_font_family;
+	}
+
+	.widget p {
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+	#logo .site-title a, h1, h2, h3, .widget h3, h4, .page-title, .post .title, .page .title, #tribe-events-content .tribe-events-calendar div[id*=tribe-events-event-] h3.tribe-events-month-event-title, #tribe-events-content .tribe-events-tooltip h4, .responsive-tabs__list__item {
+		font-family: $header_font_family;
+	}
+
+	h5, h6 {
+		font-size: 14px;
+	}
+
+	h6 {
+		font-weight: normal;
+	}
+
+	#tribe-events-content .tribe-events-tooltip h4 {
+		font-size: 24px;
+		line-height: 1.2;
+	}
+
+	.rhino-event-datebox-date p,
+	#nav-container #navigation .menus ul#main-nav li,
+	#nav-container #navigation .menus ul#main-nav li a,
+	.tribe-events-list-separator-month {
+		font-family: $header_font_family;
+	}
+}

@@ -1,0 +1,24 @@
+/* Hide Woo Metaboxes on slides (we use Meteor, not their baked in ones */
+body.wp-admin.post-type-slide #woothemes-settings { display: none; }
+
+/* Hide Woo Metaboxes on Event Create/Edit */
+body.wp-admin.post-type-tribe_events #woothemes-settings { display: none; }
+
+/*** ACF Datepicker CSS Fix ***/
+.ui-acf .ui-datepicker select.ui-datepicker-month,
+.ui-acf .ui-datepicker select.ui-datepicker-year { width: 40%; }
+
+/*** Admin Typography Options ***/
+.wp-admin #rhino_body_font_style_chosen,
+.wp-admin #rhino_header_font_size,
+.wp-admin #rhino_header_font_size_chosen,
+.wp-admin #rhino_header_font_unit_chosen,
+.wp-admin #rhino_header_font_style_chosen,
+.wp-admin #rhino_button_font_size,
+.wp-admin #rhino_button_font_size_chosen,
+.wp-admin #rhino_button_font_unit_chosen,
+.wp-admin #rhino_button_font_style_chosen { display: none; }
+
+#ace_custom_css { width:100%; min-height: 500px}
+
+#tribe-filters { display: none;}

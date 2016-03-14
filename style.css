@@ -1,0 +1,30 @@
+/**
+ * Theme Name: Rhino
+ * Theme URI: http://rockhousepartners.com/
+ * Version: 1.3.1
+ * Description: Designed and built by <a href="http://rockhousepartners.com">Rockhouse</a>.
+ * Author: Rockhouse Partners
+ * Author URI: http://rockhousepartners.com
+ * Template: canvas
+ * Tags: canvas, woothemes, the events calendar, modern tribe
+ */
+
+/*** Import styles from parent theme ***/
+@import url(../canvas/style.css);
+
+/*** Import styles for tabs on template-homepage-tabbed.php ***/
+@import url(css/styles-tabs.css);
+
+/** Inherited from Canvas **/
+#logo .site-title,
+#logo .site-description {
+	display: none;
+}
+
+/*** Fix - Two scroll bars ***/
+@media only screen and (max-width: 767px) {
+	#wrapper {
+		overflow-y: visible;
+		overflow-x: visible !important;
+	}
+}
